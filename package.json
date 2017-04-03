@@ -1,10 +1,15 @@
 {
-  "name": "brain-games",
+  "name": "kruglov-hexlet-brain-games",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
   "scripts": {
-    "babel-node": "babel-node"
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "*",
