@@ -21,12 +21,11 @@
     "babel-eslint": "*",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
-    "eslint": "*",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*",
-    "eslint-config-airbnb-base": "*"
   },
   "keywords": [],
   "author": "Dmitry Kruglov",
   "license": "ISC"
 }
-
