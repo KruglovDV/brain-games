@@ -10,7 +10,7 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build",
-    "eslint": "eslint"
+    "eslint": "eslint index.js"
   },
   "author": "Dmitry Kruglov",
   "license": "ISC",
