@@ -15,6 +15,7 @@ const isEven = (number) => {
 
 export default () => {
   console.log('Welcome to the Brain Games!\n');
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
   const userName = showGreeting();
   for (let i = 0; i < 3; i += 1) {
     const number = makeRandNamber();
