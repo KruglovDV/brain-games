@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import showGreetings from '../index.js';
+import showGreeting from '../index';
 
 console.log('Welcome to the Brain Games!\n');
 
-showGreetings();
+showGreeting();
