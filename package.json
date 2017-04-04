@@ -12,6 +12,8 @@
     "prepublish": "npm run build",
     "eslint": "eslint"
   },
+  "author": "Dmitry Kruglov",
+  "license": "ISC",
   "dependencies": {
     "readline-sync": "*"
   },
@@ -24,8 +26,5 @@
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*"
-  },
-  "keywords": [],
-  "author": "Dmitry Kruglov",
-  "license": "ISC"
+  }
 }
