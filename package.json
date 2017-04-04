@@ -1,10 +1,11 @@
 {
   "name": "kruglov-hexlet-brain-games",
-  "version": "0.0.5",
+  "version": "0.1.4",
   "description": "",
   "main": "index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "scripts": {
     "babel-node": "babel-node",
