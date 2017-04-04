@@ -4,3 +4,5 @@ export default () => {
   const usersName = readlineSync.question('May I have your name: ');
   console.log(`Hello, ${usersName}`);
 };
+
+d = 5;
