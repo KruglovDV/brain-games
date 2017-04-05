@@ -1,5 +1,5 @@
-import makeGame from './gameFlow';
-import makeRandNamber from './index';
+import makeGame from '../gameFlow';
+import { makeRandNamber } from '../index';
 
 const isEven = number => number % 2 === 0;
 
@@ -27,7 +27,6 @@ export default () => {
   const rounds = 3;
   const questions = makeQuestions(rounds);
   const answers = makeAnswers(rounds, questions);
-  console.log('Welcome to the Brain Games!\n');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-  makeGame(questions, answers, rounds);
+  const rule = 'Answer "yes" if number even otherwise answer "no".';
+  makeGame(rule, questions, answers, rounds);
 };

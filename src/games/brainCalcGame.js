@@ -1,5 +1,5 @@
-import makeGame from './gameFlow';
-import makeRandNamber from './index';
+import makeGame from '../gameFlow';
+import { makeRandNamber } from '../index';
 
 const makeQuestionsAndAnswers = (amount) => {
   const questions = [];
@@ -28,7 +28,6 @@ const questions = answersAndQuestions.quest;
 const answers = answersAndQuestions.answ;
 
 export default () => {
-  console.log('Welcome to the Brain Games!\n');
-  console.log('What is the result of the expression?\n');
-  makeGame(questions, answers, rounds);
+  const rule = 'What is the result of the expression?';
+  makeGame(rule, questions, answers, rounds);
 };

@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { showGreeting, askName, showWelcome, showRule } from './index';
 
 const makeRound = (userName, question, correctAnswer) => {
   console.log(`Question: ${question}`);
@@ -26,9 +27,11 @@ const iterator = (userName, questions, answers, acc, stop) => {
   iterator(userName, questions, answers, acc + 1, stop);
 };
 
-export default (questions, answers, rounds) => {
+export default (rule, questions, answers, rounds) => {
   const start = 0;
-  const userName = readlineSync.question('May I have your name: ');
-  console.log(`Hello, ${userName}!`);
+  showWelcome();
+  showRule(rule);
+  const userName = askName();
+  showGreeting(userName);
   iterator(userName, questions, answers, start, rounds);
 };
