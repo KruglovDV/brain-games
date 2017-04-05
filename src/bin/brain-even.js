@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startGame from '../trueOrFalseGame';
+import startGame from '../evalOrNotGame';
 
 startGame();
