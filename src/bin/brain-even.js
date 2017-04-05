@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startGame from '../evalOrNotGame';
+import startGame from '../brainEvenGame';
 
 startGame();

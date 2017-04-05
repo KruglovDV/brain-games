@@ -29,5 +29,6 @@ const iterator = (userName, questions, answers, acc, stop) => {
 export default (questions, answers, rounds) => {
   const start = 0;
   const userName = readlineSync.question('May I have your name: ');
+  console.log(`Hello, ${userName}!`);
   iterator(userName, questions, answers, start, rounds);
 };

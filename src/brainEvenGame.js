@@ -1,24 +1,19 @@
 import makeGame from './gameFlow';
-import { makeRandNamber } from './index';
+import makeRandNamber from './index';
 
-const isEven = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEven = number => number % 2 === 0;
 
-const makeQuestions = (amount) => {
+const makeQuestions = (amountOfquestions) => {
   const questions = [];
-  for (let i = 0; i < amount; i += 1) {
+  for (let i = 0; i < amountOfquestions; i += 1) {
     questions.push(makeRandNamber());
   }
   return questions;
 };
 
-const makeAnswers = (amount, questions) => {
+const makeAnswers = (amountOfAnswers, questions) => {
   const answers = [];
-  for (let i = 0; i < amount; i += 1) {
+  for (let i = 0; i < amountOfAnswers; i += 1) {
     if (isEven(questions[i])) {
       answers.push('yes');
     } else {
@@ -29,7 +24,7 @@ const makeAnswers = (amount, questions) => {
 };
 
 export default () => {
-  const rounds = 5;
+  const rounds = 3;
   const questions = makeQuestions(rounds);
   const answers = makeAnswers(rounds, questions);
   console.log('Welcome to the Brain Games!\n');

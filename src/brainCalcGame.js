@@ -1,5 +1,5 @@
 import makeGame from './gameFlow';
-import { makeRandNamber } from './index';
+import makeRandNamber from './index';
 
 const makeQuestionsAndAnswers = (amount) => {
   const questions = [];
@@ -22,7 +22,7 @@ const makeQuestionsAndAnswers = (amount) => {
   return { quest: questions, answ: answers };
 };
 
-const rounds = 5;
+const rounds = 3;
 const answersAndQuestions = makeQuestionsAndAnswers(rounds);
 const questions = answersAndQuestions.quest;
 const answers = answersAndQuestions.answ;
