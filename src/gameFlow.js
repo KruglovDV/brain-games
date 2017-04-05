@@ -18,7 +18,7 @@ const iterator = (userName, questions, answers, acc, stop) => {
     return;
   }
   const question = questions[acc];
-  const answer = answers[acc];
+  const answer = answers[acc].toString();
   const isCorrect = makeRound(userName, question, answer);
   if (!isCorrect) {
     return;
