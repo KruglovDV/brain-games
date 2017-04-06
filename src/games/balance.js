@@ -1,14 +1,9 @@
 import makeGame from '../gameFlow';
-
-const getQuestion = () => {
-  const min = 100;
-  const max = 10000;
-  return Math.ceil((Math.random() * (max - min)) + min);
-};
+import getRandNumber from '../common';
 
 const sortPred = (a, b) => (a > b ? 1 : -1);
 
-const iterator = (acc) => {
+const getAnswer = (acc) => {
   const sortedMas = acc.sort(sortPred);
   const firstDigIdx = 0;
   const lastDigIdx = sortedMas.length - 1;
@@ -18,16 +13,18 @@ const iterator = (acc) => {
   }
   sortedMas[firstDigIdx] += 1;
   sortedMas[lastDigIdx] -= 1;
-  return iterator(sortedMas);
+  return getAnswer(sortedMas);
 };
 
-const getAnswer = (question) => {
+const getQuestAndAnsw = () => {
+  const question = getRandNumber(100, 10000);
   const masOfDigits = question.toString().split('')
   .map(el => Number(el));
-  return iterator(masOfDigits).join('');
+  const answer = getAnswer(masOfDigits).join('');
+  return { quest: question, answ: answer };
 };
 
 export default () => {
   const rule = 'Balance the given number.';
-  makeGame(rule, getQuestion, getAnswer);
+  makeGame(rule, getQuestAndAnsw);
 };

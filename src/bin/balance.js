@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import startCalcGame from '../games/balanceGame';
+import startCalcGame from '../games/balance';
 
 startCalcGame();
