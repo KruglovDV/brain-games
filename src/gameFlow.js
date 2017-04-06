@@ -13,12 +13,12 @@ const makeRound = (questAndAnsw) => {
   return true;
 };
 
-const startGame = (userName, getQuestAndAnsw, acc) => {
+const startGame = (getQuestAndAnsw, acc) => {
   if (acc === stop) {
     return true;
   }
   return makeRound(getQuestAndAnsw()) ?
-    startGame(userName, getQuestAndAnsw, acc + 1) : false;
+    startGame(getQuestAndAnsw, acc + 1) : false;
 };
 
 export default (rule, getQuestAndAnsw) => {
@@ -26,7 +26,7 @@ export default (rule, getQuestAndAnsw) => {
   console.log(`${rule}\n`);
   const userName = readlineSync.question('May I have your name: ');
   console.log(`\nHello, ${userName}!\n`);
-  return startGame(userName, getQuestAndAnsw, 0) ?
-    console.log(`Congratulations, ${userName}!`) :
-    console.log(`Let's try again, ${userName}`);
+  return startGame(getQuestAndAnsw, 0) ?
+  console.log(`Congratulations, ${userName}!`) :
+  console.log(`Let's try again, ${userName}`);
 };
