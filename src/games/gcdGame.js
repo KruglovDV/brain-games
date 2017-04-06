@@ -7,13 +7,13 @@ const getRandNumber = () => {
 
 const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
 
-const makeQuestion = () => {
+const getQuestion = () => {
   const a = getRandNumber();
   const b = getRandNumber();
   return `${a} ${b}`;
 };
 
-const makeAnswer = (question) => {
+const getAnswer = (question) => {
   const a = 0;
   const b = 1;
   const parsedQuest = question.split(' ');
@@ -24,5 +24,5 @@ const makeAnswer = (question) => {
 
 export default () => {
   const rule = 'Find the greatest common divisor of given numbers.';
-  makeGame(rule, makeQuestion, makeAnswer);
+  makeGame(rule, getQuestion, getAnswer);
 };

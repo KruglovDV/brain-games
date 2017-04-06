@@ -7,11 +7,11 @@ const getRandNumber = () => {
 
 const isEven = number => number % 2 === 0;
 
-const makeQuestion = () => getRandNumber();
+const getQuestion = () => getRandNumber();
 
-const makeAnswer = question => (isEven(question) ? 'yes' : 'no');
+const getAnswer = question => (isEven(question) ? 'yes' : 'no');
 
 export default () => {
   const rule = 'Answer "yes" if number even otherwise answer "no".';
-  makeGame(rule, makeQuestion, makeAnswer);
+  makeGame(rule, getQuestion, getAnswer);
 };

@@ -5,7 +5,7 @@ const getRandNumber = () => {
   return Math.ceil(Math.random() * to);
 };
 
-const makeQuestion = () => {
+const getQuestion = () => {
   const a = getRandNumber();
   const b = getRandNumber();
   const numForRandOperation = getRandNumber();
@@ -17,7 +17,7 @@ const makeQuestion = () => {
   return `${a} * ${b}`;
 };
 
-const makeAnswer = (question) => {
+const getAnswer = (question) => {
   const a = 0;
   const b = 2;
   const operator = 1;
@@ -35,5 +35,5 @@ const makeAnswer = (question) => {
 
 export default () => {
   const rule = 'What is the result of the expression?';
-  makeGame(rule, makeQuestion, makeAnswer);
+  makeGame(rule, getQuestion, getAnswer);
 };
