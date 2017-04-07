@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const stop = 3;
+const rounds = 3;
 
 const makeRound = (questAndAnsw) => {
   console.log(`Question: ${questAndAnsw.quest}\n`);
   const answer = readlineSync.question('Your answer:  ');
-  if (questAndAnsw.answ.toString() !== answer) {
+  if (questAndAnsw.answ !== answer) {
     console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${questAndAnsw.answ}'!\n`);
     return false;
   }
@@ -14,7 +14,7 @@ const makeRound = (questAndAnsw) => {
 };
 
 const startGame = (getQuestAndAnsw, acc) => {
-  if (acc === stop) {
+  if (acc === rounds) {
     return true;
   }
   return makeRound(getQuestAndAnsw()) ?
@@ -26,7 +26,8 @@ export default (rule, getQuestAndAnsw) => {
   console.log(`${rule}\n`);
   const userName = readlineSync.question('May I have your name: ');
   console.log(`\nHello, ${userName}!\n`);
-  return startGame(getQuestAndAnsw, 0) ?
-  console.log(`Congratulations, ${userName}!`) :
+  if (startGame(getQuestAndAnsw, 0)) {
+    console.log(`Congratulations, ${userName}!`);
+  }
   console.log(`Let's try again, ${userName}`);
 };
