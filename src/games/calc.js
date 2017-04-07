@@ -4,17 +4,16 @@ import getRandNumber from '../common';
 const getQuestAndAnsw = () => {
   const a = getRandNumber();
   const b = getRandNumber();
-  let answer;
   const numForRandOperation = getRandNumber();
   if (numForRandOperation < 33) {
-    answer = a + b.toString();
-    return { quest: `${a} + ${b}`, answ: answer };
+    const answer = a + b;
+    return { quest: `${a} + ${b}`, answ: answer.toString() };
   } else if (numForRandOperation > 33 && numForRandOperation < 66) {
-    answer = a - b.toString();
-    return { quest: `${a} - ${b}`, answ: a - b };
+    const answer = a - b;
+    return { quest: `${a} - ${b}`, answ: answer.toString() };
   }
-  answer = a * b.toString();
-  return { quest: `${a} * ${b}`, answ: a * b };
+  const answer = a * b;
+  return { quest: `${a} * ${b}`, answ: answer.toString() };
 };
 
 export default () => {
