@@ -1,4 +1,4 @@
-import makeGame from '../gameFlow';
+import startGame from '../gameFlow';
 import getRandNumber from '../common';
 
 const getQuestAndAnsw = () => {
@@ -18,5 +18,5 @@ const getQuestAndAnsw = () => {
 
 export default () => {
   const rule = 'What is the result of the expression?';
-  makeGame(rule, getQuestAndAnsw);
+  startGame(rule, getQuestAndAnsw);
 };

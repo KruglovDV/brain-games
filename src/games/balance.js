@@ -1,4 +1,4 @@
-import makeGame from '../gameFlow';
+import startGame from '../gameFlow';
 import getRandNumber from '../common';
 
 const sortPred = (a, b) => (a > b ? 1 : -1);
@@ -26,5 +26,5 @@ const getQuestAndAnsw = () => {
 
 export default () => {
   const rule = 'Balance the given number.';
-  makeGame(rule, getQuestAndAnsw);
+  startGame(rule, getQuestAndAnsw);
 };

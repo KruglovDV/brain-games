@@ -1,4 +1,4 @@
-import makeGame from '../gameFlow';
+import startGame from '../gameFlow';
 import getRandNumber from '../common';
 
 const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
@@ -11,5 +11,5 @@ const getQuestAndAnsw = () => {
 
 export default () => {
   const rule = 'Find the greatest common divisor of given numbers.';
-  makeGame(rule, getQuestAndAnsw);
+  startGame(rule, getQuestAndAnsw);
 };

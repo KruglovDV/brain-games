@@ -1,4 +1,4 @@
-import makeGame from '../gameFlow';
+import startGame from '../gameFlow';
 import getRandNumber from '../common';
 
 const isEven = number => number % 2 === 0;
@@ -11,5 +11,5 @@ const getQuestAndAnsw = () => {
 
 export default () => {
   const rule = 'Answer "yes" if number even otherwise answer "no".';
-  makeGame(rule, getQuestAndAnsw);
+  startGame(rule, getQuestAndAnsw);
 };

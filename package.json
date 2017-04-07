@@ -1,6 +1,6 @@
 {
   "name": "kruglov-hexlet-brain-games",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "gameFlow.js",
   "bin": {
