@@ -4,9 +4,9 @@ import getRandNumber from '../common';
 const isEven = number => number % 2 === 0;
 
 const getQuestAndAnsw = () => {
-  const question = getRandNumber();
-  const answer = isEven(question) ? 'yes' : 'no';
-  return { quest: question, answ: answer };
+  const quest = getRandNumber();
+  const answ = isEven(quest) ? 'yes' : 'no';
+  return { question: quest, answer: answ };
 };
 
 export default () => {

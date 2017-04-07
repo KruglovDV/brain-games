@@ -2,23 +2,19 @@ import readlineSync from 'readline-sync';
 
 const rounds = 3;
 
-const makeRound = (questAndAnsw) => {
-  console.log(`Question: ${questAndAnsw.quest}\n`);
+const startGame = (getQuestAndAnsw, acc) => {
+  if (acc === 0) {
+    return true;
+  }
+  const questAndAnsw = getQuestAndAnsw();
+  console.log(`Question: ${questAndAnsw.question}\n`);
   const answer = readlineSync.question('Your answer:  ');
-  if (questAndAnsw.answ !== answer) {
-    console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${questAndAnsw.answ}'!\n`);
+  if (questAndAnsw.answer !== answer) {
+    console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${questAndAnsw.answer}'!\n`);
     return false;
   }
   console.log('\nCorrect!\n');
-  return true;
-};
-
-const startGame = (getQuestAndAnsw, acc) => {
-  if (acc === rounds) {
-    return true;
-  }
-  return makeRound(getQuestAndAnsw()) ?
-    startGame(getQuestAndAnsw, acc + 1) : false;
+  return startGame(getQuestAndAnsw, acc - 1);
 };
 
 export default (rule, getQuestAndAnsw) => {
@@ -26,7 +22,7 @@ export default (rule, getQuestAndAnsw) => {
   console.log(`${rule}\n`);
   const userName = readlineSync.question('May I have your name: ');
   console.log(`\nHello, ${userName}!\n`);
-  if (startGame(getQuestAndAnsw, 0)) {
+  if (startGame(getQuestAndAnsw, rounds)) {
     console.log(`Congratulations, ${userName}!`);
   } else {
     console.log(`Let's try again, ${userName}`);

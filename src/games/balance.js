@@ -17,11 +17,11 @@ const getAnswer = (acc) => {
 };
 
 const getQuestAndAnsw = () => {
-  const question = getRandNumber(100, 10000);
-  const masOfDigits = question.toString().split('')
+  const quest = getRandNumber(100, 10000);
+  const masDigits = quest.toString().split('')
   .map(el => Number(el));
-  const answer = getAnswer(masOfDigits).join('');
-  return { quest: question, answ: answer };
+  const answ = getAnswer(masDigits).join('');
+  return { question: quest, answer: answ };
 };
 
 export default () => {
