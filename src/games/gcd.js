@@ -1,5 +1,5 @@
 import startGame from '../gameFlow';
-import getRandNumber from '../common';
+import { getRandNumber } from '../common';
 
 const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
 

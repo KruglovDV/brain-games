@@ -1,7 +1,5 @@
 import startGame from '../gameFlow';
-import getRandNumber from '../common';
-
-const isEven = number => number % 2 === 0;
+import { getRandNumber, isEven } from '../common';
 
 const getQuestAndAnsw = () => {
   const quest = getRandNumber();

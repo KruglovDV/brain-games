@@ -1,6 +1,6 @@
 {
   "name": "kruglov-hexlet-brain-games",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "main": "gameFlow.js",
   "bin": {
@@ -9,7 +9,8 @@
     "brain-calc": "dist/bin/calc.js",
     "brain-gcd": "dist/bin/gcd.js",
     "brain-balance": "dist/bin/balance.js",
-    "brain-progression": "dist/bin/progression.js"
+    "brain-progression": "dist/bin/progression.js",
+    "brain-prime": "dist/bin/prime.js"
   },
   "scripts": {
     "babel-node": "babel-node",

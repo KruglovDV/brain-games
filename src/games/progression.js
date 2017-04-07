@@ -1,5 +1,5 @@
 import startGame from '../gameFlow';
-import getRandNumber from '../common';
+import { getRandNumber } from '../common';
 
 const progressionLength = 10;
 
