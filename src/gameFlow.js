@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 
 const rounds = 3;
 
-const startGame = (getQuestAndAnsw, acc) => {
-  if (acc === 0) {
+const startGame = (getQuestAndAnsw, round) => {
+  if (round === 0) {
     return true;
   }
   const questAndAnsw = getQuestAndAnsw();
@@ -14,7 +14,7 @@ const startGame = (getQuestAndAnsw, acc) => {
     return false;
   }
   console.log('\nCorrect!\n');
-  return startGame(getQuestAndAnsw, acc - 1);
+  return startGame(getQuestAndAnsw, round - 1);
 };
 
 export default (rule, getQuestAndAnsw) => {
