@@ -28,6 +28,7 @@ export default (rule, getQuestAndAnsw) => {
   console.log(`\nHello, ${userName}!\n`);
   if (startGame(getQuestAndAnsw, 0)) {
     console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}`);
   }
-  console.log(`Let's try again, ${userName}`);
 };
