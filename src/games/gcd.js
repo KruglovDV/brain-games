@@ -6,7 +6,7 @@ const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
 const getQuestAndAnsw = () => {
   const a = getRandNumber();
   const b = getRandNumber();
-  return { quest: `${a} ${b}`, answ: gcd(a, b) };
+  return { quest: `${a} ${b}`, answ: gcd(a, b).toString() };
 };
 
 export default () => {

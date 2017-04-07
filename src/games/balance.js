@@ -4,16 +4,16 @@ import getRandNumber from '../common';
 const sortPred = (a, b) => (a > b ? 1 : -1);
 
 const getAnswer = (acc) => {
-  const sortedMas = acc.sort(sortPred);
+  const sortedMasDigits = acc.sort(sortPred);
   const firstDigIdx = 0;
-  const lastDigIdx = sortedMas.length - 1;
-  if (sortedMas[firstDigIdx] === sortedMas[lastDigIdx] ||
-      sortedMas[firstDigIdx] === sortedMas[lastDigIdx] - 1) {
+  const lastDigIdx = sortedMasDigits.length - 1;
+  if (sortedMasDigits[firstDigIdx] === sortedMasDigits[lastDigIdx] ||
+      sortedMasDigits[firstDigIdx] === sortedMasDigits[lastDigIdx] - 1) {
     return acc;
   }
-  sortedMas[firstDigIdx] += 1;
-  sortedMas[lastDigIdx] -= 1;
-  return getAnswer(sortedMas);
+  sortedMasDigits[firstDigIdx] += 1;
+  sortedMasDigits[lastDigIdx] -= 1;
+  return getAnswer(sortedMasDigits);
 };
 
 const getQuestAndAnsw = () => {
