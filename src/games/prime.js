@@ -1,8 +1,8 @@
 import startGame from '../gameFlow';
-import { getRandNumber, isEven } from '../common';
+import { getRandNumber } from '../common';
 
 const isPrime = (number, sqrt, div) => {
-  if (div === sqrt) {
+  if (div === sqrt || number === 2) {
     return true;
   } else if (number % div === 0) {
     return false;
@@ -12,11 +12,6 @@ const isPrime = (number, sqrt, div) => {
 
 const getQuestAndAnsw = () => {
   const quest = getRandNumber();
-  if (isEven(quest) && quest !== 2) {
-    return { question: quest, answer: 'no' };
-  } else if (quest === 2) {
-    return { question: quest, answer: 'yes' };
-  }
   const div = 2;
   const sqrt = Math.round(Math.sqrt(quest));
   const answ = isPrime(quest, sqrt, div) ? 'yes' : 'no';
