@@ -17,8 +17,9 @@ const getQuestAndAnsw = () => {
   } else if (quest === 2) {
     return { question: quest, answer: 'yes' };
   }
+  const div = 2;
   const sqrt = Math.round(Math.sqrt(quest));
-  const answ = isPrime(quest, sqrt, 2) ? 'yes' : 'no';
+  const answ = isPrime(quest, sqrt, div) ? 'yes' : 'no';
   return { question: quest, answer: answ };
 };
 
