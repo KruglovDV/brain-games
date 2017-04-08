@@ -1,20 +1,20 @@
 import startGame from '../gameFlow';
 import { getRandNumber } from '../common';
 
-const isPrime = (number, sqrt, div) => {
-  if (div === sqrt || number === 2) {
-    return true;
-  } else if (number % div === 0) {
-    return false;
+
+const isPrime = (number) => {
+  const sqrt = Math.round(Math.sqrt(number));
+  for (let div = 2; div < sqrt; div += 1) {
+    if (number % div === 0) {
+      return false;
+    }
   }
-  return isPrime(number, sqrt, div + 1);
+  return true;
 };
 
 const getQuestAndAnsw = () => {
   const quest = getRandNumber();
-  const div = 2;
-  const sqrt = Math.round(Math.sqrt(quest));
-  const answ = isPrime(quest, sqrt, div) ? 'yes' : 'no';
+  const answ = isPrime(quest) ? 'yes' : 'no';
   return { question: quest, answer: answ };
 };
 
