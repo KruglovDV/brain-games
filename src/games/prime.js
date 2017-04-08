@@ -1,7 +1,6 @@
 import startGame from '../gameFlow';
 import { getRandNumber } from '../common';
 
-
 const isPrime = (number) => {
   const sqrt = Math.round(Math.sqrt(number));
   for (let div = 2; div < sqrt; div += 1) {
